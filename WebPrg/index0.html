@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: gray; /* Gri arka plan rengi */
+}
+
+.button {
+    background-color: #4CAF50; /* Arkaplan rengi */
+    border: none; /* Kenarlık yok */
+    color: black; /* Metin rengi */
+    padding: 15px 32px; /* İç boşluk */
+    text-align: center; /* Metni ortala */
+    text-decoration: none; /* Metin altı çizgisi yok */
+    display: inline-block;
+    font-size: 16px; /* Metin boyutu */
+    margin: 4px 2px; /* Butonlar arası boşluk */
+    cursor: pointer; /* İmleci el işareti yap */
+    border-radius: 10px; /* Kenar yumuşatma */
+    transition: .5s;
+}
+
+.social-icons {
+    display: flex;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+/* Ikonlarin boyutu ve renk */
+.sosyal-medya-ikonlari a {
+    color: #333; /* Ikon rengi */
+    font-size: 24px; /* Ikon boyutu */
+    margin-right: 10px; /* Ikonlar arasi bosluk */
+    text-decoration: none; /* Link altı çizgiyi kaldırma */
+  }
+  
+  /* Ikonlara fare üzeri geldiğinde rengin degismesi */
+  .sosyal-medya-ikonlari a:hover {
+    color: #007bff; /* Yeni renk */
+  }
+  
+  /* Ikonlarin çerçevesi */
+  .sosyal-medya-ikonlari a i {
+    border: 2px solid #333; /* Çerçeve rengi */
+    border-radius: 50%; /* Yuvarlatılmış kenarlar */
+    padding: 8px; /* Çerçeve içi boşluk */
+  }  
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkında • YasirBz</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="style0.css">
+    <link rel="icon" href="c:\Users\pc1\Desktop\WebPrg\download.jpg" type="image/⚓️">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* CSS ile resmi ve metni hizala */
+        .container {
+            text-align: center;
+        }
+        .image {
+            float: left;
+            margin-right: 20px; /* İstediğiniz boşluk için */
+        }
+    </style>
+        <style>
+            /* Style for the buttons */
+            button {
+                background-color: #4CAF50; /* Green background */
+                border: none; /* No border */
+                color: white; /* White text */
+                padding: 15px 32px; /* Padding */
+                text-align: center; /* Centered text */
+                text-decoration: none; /* No underline */
+                display: inline-block; /* Display as inline block */
+                font-size: 16px; /* Font size */
+                margin: 4px 2px; /* Margin */
+                cursor: pointer; /* Cursor on hover */
+                border-radius: 10px; /* Rounded corners */
+            }
+
+            .button:hover {
+                background: #fff;
+            }
+
+            /* Style for the image */
+            #myImage {
+                width: 100px; /* Image width */
+            }
+            
+        </style>
+        <style>
+            .round-img {
+                border-radius: 50%;
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Resmi hizalamak için bir div içinde bir img kullanıyoruz -->
+        <div class="image">
+            <img src="c:\Users\pc1\Desktop\WebPrg\bliss.jpg" alt="Resim Açıklaması">
+        </div>
+        <!-- Metni ortalamak için bir div -->
+        <div>
+            <br>
+            <img src="c:\Users\pc1\Desktop\WebPrg\download.png" alt="Yuvarlak Resim" class="round-img">
+            <br><h1>Hakkında</h1><br>
+            <p>Merhaba ben Yasir; 2005 yılında doğdum, memleketim Erdemli.</p>
+            <p>Mersin ilinin Erdemli ilçesinde yaşıyorum.</p>
+            <p>Şuan Toros Üniversitesi'nde Bilgisayar Programcılığı bölümünde okumaktayım.</p>
+        </div><br>
+        <h4 class="iletişim">📞 <a href="tel:+905431957200">+905431957200</a>  <a href="https://www.google.com/intl/tr/gmail/about/" target="_blank">📧237087003@toros.edu.tr</a></h4>
+        <br>
+        <div class="sosyal-medya-ikonlari">
+            <a href="https://www.linkedin.com/in/yasir-boz-556bb1308/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/yasirr0" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="file:///C:/Users/pc1/Desktop/WebPrg/index.html">
+                <button class="button">Ana Sayfa</button>
+            </a>
+            <!-- Diğer sosyal medya ikonlarını buraya ekleyebilirsiniz -->
+          </div><br><br>
+        <button onclick="myFunction()">Teşekkür edebilir miyim?</button>
+        <script>
+        function myFunction() {
+          alert("Rica ederim");
+        }
+        </script>
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button> <!--Lambayı açar-->
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button> <!--Lambayı kapatır-->
+</div>
+    </div>
+</body>
+</html>

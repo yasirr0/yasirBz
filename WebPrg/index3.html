@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: gray;
+    background-size: cover;
+    background-position: center;
+}
+
+.input-radio {
+    display: flex;
+  }
+  
+.wrapper {
+    width: 420px;
+    background: rgb(19, 133, 92);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper .btn:hover {
+    background: #fff;
+    transition: .3s;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #000000;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #000000;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    color: #000000;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: yellowgreen;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+    color: #353535;
+}
+
+.register-link p a {
+    color: #161616;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.input-radio {
+    color: #161616;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="icon" href="c:\Users\pc1\Desktop\WebPrg\download.jpg" type="image/⚓️">
+    <title>Kaydol • YasirBz</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Kaydol</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Adı Soyadı">
+                <box-icon type='solid' name='user'></box-icon>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="E-posta veya Telefon" required>
+                <box-icon type='solid' name='user'></box-icon>
+            </div>
+            <div class="input-box">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Şifre" minlength="6" required>
+                <button type="button" onclick="togglePasswordVisibility()">👁</button>
+                <script>
+                  function togglePasswordVisibility() {
+                    var passwordInput = document.getElementById("password");
+                    if (passwordInput.type === "password") {
+                      passwordInput.type = "text";
+                    } else {
+                      passwordInput.type = "password";
+                    }
+                  }
+                </script>
+
+            </div>
+            <div class="input-box">
+                <label for="confirm_password"></label>
+                <input type="password" id="confirm_password" placeholder="Şifre Tekrar" name="confirm_password" minlength="6" required><br>
+
+                <span id="password_match"></span>
+            </div>
+            <div class="input-radio">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Erkek</label><br>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Kadın</label><br>
+            </div>
+            <br>
+            <div class="dating">
+                <label for="birthday">Doğum Tarihi:</label>
+                <input type="date" id="birthday" name="birthday" min="1900-01-01" max="" required>
+            </div>
+            <br>
+            <a href="file:///C:/Users/pc1/Desktop/WebPrg/index2.html?">Giriş Yap</a>
+            <br>
+            <br>
+            <button type="submit" class="btn">Kaydol</button>
+            <div class="register-link">
+              <a href="file:///C:/Users/pc1/Desktop/WebPrg/index.html">Ana Sayfa</a>
+            </div>
+        </form>
+<script>
+  document.getElementById("confirm_password").addEventListener("input", function() {
+    var password = document.getElementById("password").value;
+    var confirm_password = document.getElementById("confirm_password").value;
+    var password_match_span = document.getElementById("password_match");
+
+    if (password === confirm_password) {
+      password_match_span.textContent = "Şifreler eşleşiyor.";
+      password_match_span.style.color = "blue";
+    } else {
+      password_match_span.textContent = "Şifreler eşleşmiyor.";
+      password_match_span.style.color = "red";
+    }
+  });
+</script>
+    </div>
+</body>
+</html>
